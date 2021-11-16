@@ -1,0 +1,18 @@
+﻿@using HolidayWebChat.DataAccess
+@model IEnumerable<Location>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">GIMME A LOCATION SONNYJIM</h1>
+
+    @{
+        foreach (var location in Model)
+        {
+            <p>@location.Country</p>
+            <p>@location.City</p>
+            <hr/>
+        }
+    }
+</div>

@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Locations]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Continent] NVARCHAR(MAX) NULL, 
+    [Country] NVARCHAR(MAX) NULL, 
+    [City] NVARCHAR(MAX) NULL, 
+    [VIBE] NVARCHAR(MAX) NULL
+)

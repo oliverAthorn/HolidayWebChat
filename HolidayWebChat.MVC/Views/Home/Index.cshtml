@@ -1,0 +1,20 @@
+﻿@using HolidayWebChat.DataAccess
+@model IEnumerable<Location>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">We're on our 'OLIDAYS'</h1>
+    <form method="post" asp-controller="Home" asp-action="Index">
+        <h3 class="h3">Which continent you finna go to?</h3>
+        <div class="text-center">
+            <label><input type="radio" name="Continent" value="Asia" style="margin: 10px" />Asia</label>
+            <label><input type="radio" name="Continent" value="North America" style="margin: 10px" />North America</label>
+            <label><input type="radio" name="Continent" value="Europe" style="margin: 10px" />Europe</label>
+            <label><input type="radio" name="Continent" value="Africa" style="margin: 10px" />Africa</label>
+        </div>
+        <br />
+        <input type="submit" value="Take Me There">
+    </form>
+</div>
