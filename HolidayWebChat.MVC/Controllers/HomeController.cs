@@ -30,10 +30,10 @@ namespace HolidayWebChat.MVC.Controllers
             {
                 return View();
             }
-            var form = Request.Form;
-            var location = form["Continent"];
-            HttpContext.Session.SetString("Continent", location);
-            return RedirectToAction("LocationInfo");
+            //var form = Request.Form;
+            //var location = form["Continent"];
+            //HttpContext.Session.SetString("Continent", location);
+            return RedirectToAction("QuestionOneSubmit");
         }
 
         [HttpPost] public IActionResult QuestionOneSubmit(ChatBotModel model)
@@ -43,15 +43,24 @@ namespace HolidayWebChat.MVC.Controllers
         
         public IActionResult QuestionTwo(ChatBotModel model)
         {
-
-            return View(model);
+            return View("QuestionTwo", model);
         }
 
+        [HttpPost]
+        public IActionResult QuestionTwoSubmit(ChatBotModel model)
+        {
+            return QuestionThree(model);
+        }
+
+        public IActionResult QuestionThree(ChatBotModel model)
+        {
+            return View("QuestionThree", model);   
+        }
         public IActionResult LocationInfo()
         {
             string continent = HttpContext.Session.GetString("Continent");
             IEnumerable<Location> locations = _locationRepository.GetLocationByContinent(continent);
-           return View(locations);
+            return View(locations);
         }
 
         public IActionResult Privacy()

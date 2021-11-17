@@ -8,5 +8,9 @@ namespace HolidayWebChat.MVC.Models
     public class ChatBotModel
     {
         public string Continent { get; set; }
+
+        public string Country { get; set; }
+        public string City { get; set; }
     }
+
 }

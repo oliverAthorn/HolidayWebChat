@@ -6,10 +6,11 @@
 
 <div class="text-center">
     <h1 class="display-4">Hello! I am a friendly Holiday Chat Bot.</h1>
-    <form method="post" asp-controller="Home" asp-action="QuestionTwoSubmit">
-        <h3 class="h3">Thank you! Next, I'd like to know what Country you would prefer to visit...'</h3>
+    <form method="post" asp-controller="Home" asp-action="QuestionThree">
+        <h3 class="h3">Great! Now, I'd like to know if you have a City in mind...'</h3>
         <div class="text-center">
-            @Html.TextBoxFor(m => m.Country)
+            @Html.TextBoxFor(m => m.City)
+            @Html.HiddenFor(m => m.Country)
             @Html.HiddenFor(m => m.Continent)
         </div>
         <br />
