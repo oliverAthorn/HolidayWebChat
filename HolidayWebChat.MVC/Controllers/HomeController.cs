@@ -77,6 +77,33 @@ namespace HolidayWebChat.MVC.Controllers
             return View("QuestionFive", model);
         }
 
+        [HttpPost]
+        public IActionResult QuestionFiveSubmit(ChatBotModel model)
+        {
+            return QuestionSix(model);
+        }
+
+        public IActionResult QuestionSix(ChatBotModel model)
+        {
+            return View("QuestionSix", model);
+        }
+
+        [HttpPost]
+        public IActionResult QuestionSixSubmit(ChatBotModel model)
+        {
+            return Recommendation(model);
+        }
+
+        public IActionResult Recommendation(ChatBotModel model)
+        {
+            return View("Recommendation", model);
+        }
+        
+        public IActionResult ReturnToStart()
+        {
+            return RedirectToAction("Index");
+        }
+
         public IActionResult LocationInfo()
         {
             string continent = HttpContext.Session.GetString("Continent");

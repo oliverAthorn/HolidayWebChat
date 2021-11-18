@@ -1,0 +1,62 @@
+﻿@using HolidayWebChat.DataAccess
+@model ChatBotModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello! I am a friendly Holiday Chat Bot.</h1>
+    <form method="post" asp-controller="Home" asp-action="QuestionSixSubmit">
+        <h3 class="h3">Now I know what you love, what do you wish you could do more of?</h3>
+        <div class="text-center">
+            @Html.HiddenFor(m => m.City)
+            @Html.HiddenFor(m => m.Country)
+            @Html.HiddenFor(m => m.Continent)
+            @Html.HiddenFor(m => m.Continental)
+            @Html.HiddenFor(m => m.Tropical)
+            @Html.HiddenFor(m => m.Mediterranean)
+            @Html.HiddenFor(m => m.Wintery)
+            @Html.HiddenFor(m => m.SnowSports)
+            @Html.HiddenFor(m => m.Exploring)
+            @Html.HiddenFor(m => m.Climbing)
+            @Html.HiddenFor(m => m.Relaxing)
+            @Html.HiddenFor(m => m.Swimming)
+            @Html.HiddenFor(m => m.Gaming)
+            @Html.HiddenFor(m => m.Dancing)
+            @Html.HiddenFor(m => m.Culture)
+            <div>
+                Snow sports!
+                @Html.CheckBoxFor(m => m.SnowSports)
+            </div>
+            <div>
+                Exploring!
+                @Html.CheckBoxFor(m => m.Exploring)
+            </div>
+            <div>
+                Climbing!
+                @Html.CheckBoxFor(m => m.Climbing)
+            </div>
+            <div>
+                Relaxing!
+                @Html.CheckBoxFor(m => m.Relaxing)
+            </div>
+            <div>
+                Swimming!
+                @Html.CheckBoxFor(m => m.Swimming)
+            </div>
+            <div>
+                Gaming!
+                @Html.CheckBoxFor(m => m.Gaming)
+            </div>
+            <div>
+                Dancing!
+                @Html.CheckBoxFor(m => m.Dancing)
+            </div>
+            <div>
+                Taking in Culture!
+                @Html.CheckBoxFor(m => m.Culture)
+            </div>
+            <br />
+            <input type="submit" value="Take Me There">
+</form>
+</div>
