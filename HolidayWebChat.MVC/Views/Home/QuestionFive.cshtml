@@ -1,0 +1,23 @@
+﻿@using HolidayWebChat.DataAccess
+@model ChatBotModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello! I am a friendly Holiday Chat Bot.</h1>
+    <form method="post" asp-controller="Home" asp-action="QuestionFourSubmit">
+        <h3 class="h3">Picture your dream holiday. Which climate do you find yourself it?</h3>
+        <div class="text-center">
+            @Html.HiddenFor(m => m.City)
+            @Html.HiddenFor(m => m.Country)
+            @Html.HiddenFor(m => m.Continent)
+            @Html.HiddenFor(m => m.Continental)
+            @Html.HiddenFor(m => m.Tropical)
+            @Html.HiddenFor(m => m.Mediterranean)
+            @Html.HiddenFor(m => m.Wintery)
+           
+            <br />
+            <input type="submit" value="Take Me There">
+    </form>
+</div>

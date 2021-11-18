@@ -46,8 +46,7 @@ namespace HolidayWebChat.MVC.Controllers
             return View("QuestionTwo", model);
         }
 
-        [HttpPost]
-        public IActionResult QuestionTwoSubmit(ChatBotModel model)
+        [HttpPost] public IActionResult QuestionTwoSubmit(ChatBotModel model)
         {
             return QuestionThree(model);
         }
@@ -56,6 +55,17 @@ namespace HolidayWebChat.MVC.Controllers
         {
             return View("QuestionThree", model);   
         }
+
+        [HttpPost] public IActionResult QuestionThreeSubmit(ChatBotModel model)
+        {
+            return QuestionFour(model);
+        }
+
+        public IActionResult QuestionFour(ChatBotModel model)
+        {
+            return View("QuestionFour", model);
+        }
+
         public IActionResult LocationInfo()
         {
             string continent = HttpContext.Session.GetString("Continent");
