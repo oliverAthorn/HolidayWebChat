@@ -1,5 +1,6 @@
 ﻿@using HolidayWebChat.DataAccess
 @model ChatBotModel
+@model Location
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -23,8 +24,13 @@
             @Html.HiddenFor(m => m.Swimming)
             @Html.HiddenFor(m => m.Gaming)
             @Html.HiddenFor(m => m.Dancing)
-            @Html.HiddenFor(m => m.Culture)
+            @Html.HiddenFor(m => m.Culture)   
         </div>
+        
+        <div>
+          
+        </div>
+
         <br />
         <input type="submit" value="Keep talking">
     </form>

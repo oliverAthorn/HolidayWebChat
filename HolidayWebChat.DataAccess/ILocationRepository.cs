@@ -11,5 +11,6 @@ namespace HolidayWebChat.DataAccess
     {
         public IEnumerable<Location> GetAll();
         public IEnumerable<Location> GetLocationByContinent(string continent);
+        public IEnumerable<Location> Recommendation();
     }
 }

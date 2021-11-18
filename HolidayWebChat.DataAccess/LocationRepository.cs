@@ -32,5 +32,10 @@ namespace HolidayWebChat.DataAccess
             using var conn = new SqlConnection(_connectionString);
             return conn.Query<Location>(query).AsList();
         }
+
+        public IEnumerable<Location> Recommendation()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
