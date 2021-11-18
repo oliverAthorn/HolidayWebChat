@@ -6,8 +6,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Hello! I am a friendly Holiday Chat Bot.</h1>
-    <form method="post" asp-controller="Home" asp-action="QuestionFourSubmit">
-        <h3 class="h3">Picture your dream holiday. Which climate do you find yourself it?</h3>
+    <form method="post" asp-controller="Home" asp-action="QuestionFiveSubmit">
+        <h3 class="h3">What activity do you love? What do you do a lot of?</h3>
         <div class="text-center">
             @Html.HiddenFor(m => m.City)
             @Html.HiddenFor(m => m.Country)
@@ -16,8 +16,39 @@
             @Html.HiddenFor(m => m.Tropical)
             @Html.HiddenFor(m => m.Mediterranean)
             @Html.HiddenFor(m => m.Wintery)
-           
+            <div>
+                Snow sports!
+                @Html.CheckBoxFor(m => m.SnowSports)
+            </div>
+            <div>
+                Exploring!
+                @Html.CheckBoxFor(m => m.Exploring)
+            </div>
+            <div>
+                Climbing!
+                @Html.CheckBoxFor(m => m.Climbing)
+            </div>
+            <div>
+                Relaxing!
+                @Html.CheckBoxFor(m => m.Relaxing)
+            </div>
+            <div>
+                Swimming!
+                @Html.CheckBoxFor(m => m.Swimming)
+            </div>
+            <div>
+                Gaming!
+                @Html.CheckBoxFor(m => m.Gaming)
+            </div>
+            <div>
+                Dancing!
+                @Html.CheckBoxFor(m => m.Dancing)
+            </div>
+            <div>
+                Taking in Culture!
+                @Html.CheckBoxFor(m => m.Culture)
+            </div>
             <br />
             <input type="submit" value="Take Me There">
-    </form>
+</form>
 </div>

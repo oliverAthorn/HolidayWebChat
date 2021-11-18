@@ -14,7 +14,14 @@ namespace HolidayWebChat.MVC.Models
         public bool Wintery { get; set; }
         public bool Mediterranean { get; set; }
         public bool Tropical { get; set; }
-
+        public bool SnowSports { get; set; }
+        public bool Exploring { get; set; }
+        public bool Climbing { get; set; }
+        public bool Relaxing { get; set; }
+        public bool Swimming { get; set; }
+        public bool Dancing { get; set; }
+        public bool Culture { get; set; }
+        public bool Gaming { get; set; }
     }
 
 }
